@@ -1,0 +1,6 @@
+mkdir carpeta1
+cd carpeta1
+echo "texto" > fichero1.txt
+dir
+dirr
+echo final
