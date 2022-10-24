@@ -5,17 +5,20 @@ import java.io.*;
 public class MostrarAlumnosCurso {
     public static void main(String[] args) {
         File datos = new File("C:\\Users\\DAM2\\IdeaProjects\\F1\\alumnos_centro.csv");
-        FileReader ficheroleer = null;
         try {
-            ficheroleer = new FileReader(datos);
-            BufferedReader bl = new BufferedReader(ficheroleer);
+            FileReader fl = new FileReader(datos);
+            BufferedReader br = new BufferedReader(fl);
             for (int i = 0; i <13; i++){
-                String linea = bl.readLine();
-                //System.out.println(linea);
+                String linea = br.readLine();
                 dividirInfo(linea);
-
+                //System.out.println(linea);
             }
 
+
+
+
+            fl.close();
+            br.close();
         } catch (FileNotFoundException e) {
             throw new RuntimeException(e);
         } catch (IOException e) {
